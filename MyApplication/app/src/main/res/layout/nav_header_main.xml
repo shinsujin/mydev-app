@@ -32,13 +32,13 @@
         android:layout_height="23dp"
         android:background="#003044"
         android:layout_marginTop="10dp"
-        android:text="Login"/>
+        android:text="login"/>
     <Button
         android:layout_width="80dp"
         android:layout_height="23dp"
         android:background="#003044"
         android:="0"
-        android:text="Sign Up"
+        android:text="sign up"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"/>
 </LinearLayout>
