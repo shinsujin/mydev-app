@@ -70,7 +70,7 @@ public class MainMenuTabActivity extends ActionBarActivity implements ActionBar.
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         // res/menu/menu.xml에 정의된 메뉴 출력. ActionBar에 Menu 추가 하는 것도 이곳에서 구현
-        getMenuInflater().inflate(R.menu.menu_tab.menu);
+        getMenuInflater().inflate(R.menu.menu_tab.menu); 
         return true;
     }
     @Override
