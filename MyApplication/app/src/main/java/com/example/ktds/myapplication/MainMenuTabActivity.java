@@ -20,6 +20,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 
 /**
@@ -67,10 +68,11 @@ public class MainMenuTabActivity extends ActionBarActivity implements ActionBar.
         }
     }
     //Menu Key click 시 Menu 출력 위한 구현.
+    /*
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         // res/menu/menu.xml에 정의된 메뉴 출력. ActionBar에 Menu 추가 하는 것도 이곳에서 구현
-        getMenuInflater().inflate(R.menu.menu_tab.menu); 
+        getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
     @Override
@@ -82,7 +84,7 @@ public class MainMenuTabActivity extends ActionBarActivity implements ActionBar.
         }
         return super.onOptionsItemSelected(item);
     }
-
+*/
     //상단 Tab을 선택 시 해당 Page 출력 위해 onTabSelected Override
     @Override
     public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {
