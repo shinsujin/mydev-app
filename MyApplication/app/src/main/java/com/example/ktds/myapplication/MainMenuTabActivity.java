@@ -104,6 +104,7 @@ public class MainMenuTabActivity extends ActionBarActivity implements ActionBar.
 
     //상위에 선언된 SectionsPagerAdapter 클래스의 구현. FragmentPagerAdapter 상속받아 생성.
     private class SectionsPagerAdapter extends FragmentPagerAdapter {
+
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
         }
@@ -160,7 +161,7 @@ public class MainMenuTabActivity extends ActionBarActivity implements ActionBar.
         public static  PlaceholderFragment newInstance(int sectionNumber){
             PlaceholderFragment fragment = new PlaceholderFragment();
             Bundle args = new Bundle();
-            args.putInt(ARG_SECTION_NUMBER.sectionNumber);
+            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
             fragment.setArguments(args);
             return fragment;
         }
@@ -171,7 +172,7 @@ public class MainMenuTabActivity extends ActionBarActivity implements ActionBar.
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
             //R.layout.fragment_main에 정의된 TextView에 섹션 번호를 설정
-            view rootView = inflater.inflate(R.layout.fragment_tab, container, false);
+            View rootView = inflater.inflate(R.layout.fragment_tab, container, false);
             return rootView;
         }
     }
@@ -201,7 +202,7 @@ public class MainMenuTabActivity extends ActionBarActivity implements ActionBar.
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-            View rootView = inflater.inflate(R.layout.tab_shop_Info, container, false);
+            View rootView = inflater.inflate(R.layout.tab_shop_info, container, false);
 
             final ArrayList<String> arrayList = new ArrayList<String>();
             arrayList.add("사과");
