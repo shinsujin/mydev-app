@@ -202,7 +202,7 @@ public class MainMenuTabActivity extends ActionBarActivity implements ActionBar.
 
             final ArrayList<String> arrayList = new ArrayList<String>();
             arrayList.add("사과");
-            arrayList.add("쥬스");
+            arrayList.add("쥬스당");
 
             final ArrayAdapter<String> adapter;
             adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, arrayList);
