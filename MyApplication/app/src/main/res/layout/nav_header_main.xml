@@ -28,16 +28,17 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <Button
+        android:id="@+id/btnLogin"
         android:layout_width="80dp"
         android:layout_height="23dp"
         android:background="#003044"
         android:layout_marginTop="10dp"
         android:text="login"/>
     <Button
+        android:id="@+id/btnSignUp"
         android:layout_width="80dp"
         android:layout_height="23dp"
         android:background="#003044"
-        android:="0"
         android:text="sign up"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"/>
