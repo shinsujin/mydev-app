@@ -20,6 +20,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.example.ktds.myapplication.store.StoreInfo;
@@ -52,6 +53,15 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        /*Button btnLogin = (Button) findViewById(R.id.btnLogin);
+        Button btnSignUp = (Button) findViewById(R.id.btnSignUp);
+
+        btnLogin.setOnClickListener(new Button.OnClickListener() {
+            public void onClick(View v) {
+                //setContentView(R.layout.activity_login);
+            }
+        });*/
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -204,18 +214,16 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+        if (id == R.id.nav_editInfo) {
+            // 회원정보수정
+        } else if (id == R.id.nav_home) {
+            // 홈
+        } else if (id == R.id.nav_notice) {
+            // 공지사항
+        } else if (id == R.id.nav_mystore) {
+            // 내매장정보
+        } else if (id == R.id.nav_version) {
+            // 앱 버전정보
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
