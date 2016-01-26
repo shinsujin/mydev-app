@@ -66,9 +66,10 @@ public class MainMenuTabActivity extends ActionBarActivity implements ActionBar.
             actionBar.addTab(actionBar.newTab().setText( mSectionsPagerAdapter.getPageTitle(i)).setTabListener(this) );
         }
     }
-    //Menu Key click 시 Menu 출력 위한 구현. res/menu/menu.xml에 정의된 메뉴 출력. ActionBar에 Menu 추가 하는 것도 이곳에서 구현
+    //Menu Key click 시 Menu 출력 위한 구현.
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
+        // res/menu/menu.xml에 정의된 메뉴 출력. ActionBar에 Menu 추가 하는 것도 이곳에서 구현
         getMenuInflater().inflate(R.menu.menu_tab.menu);
         return true;
     }
