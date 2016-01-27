@@ -33,7 +33,7 @@ public class MainMenuTabActivity extends ActionBarActivity implements ActionBar.
     /**
      * The {@link ViewPager} that will host the section contents.
      */
-    private ViewPager mViewPager;
+    ViewPager mViewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
