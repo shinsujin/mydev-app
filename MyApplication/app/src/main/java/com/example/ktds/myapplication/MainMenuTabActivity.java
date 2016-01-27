@@ -33,7 +33,7 @@ public class MainMenuTabActivity extends ActionBarActivity implements ActionBar.
     /**
      * The {@link ViewPager} that will host the section contents.
      */
-    ViewPager mViewPager;
+    private ViewPager mViewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -142,11 +142,11 @@ public class MainMenuTabActivity extends ActionBarActivity implements ActionBar.
             Locale l = Locale.getDefault();
             switch (position) {
                 case 0:
-                    return getString(R.string.title_section1).toUpperCase(l);
+                    return getString(R.string.title_tab1).toUpperCase(l);
                 case 1:
-                    return getString(R.string.title_section2).toUpperCase(l);
+                    return getString(R.string.title_tab2).toUpperCase(l);
                 case 2:
-                    return getString(R.string.title_section3).toUpperCase(l);
+                    return getString(R.string.title_tab3).toUpperCase(l);
             }
             return null;
         }
