@@ -1,6 +1,7 @@
 package com.example.ktds.myapplication;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -217,6 +218,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_editInfo) {
             // 회원정보수정
         } else if (id == R.id.nav_home) {
+            goMainMenuTabPage();
             // 홈
         } else if (id == R.id.nav_notice) {
             // 공지사항
@@ -229,5 +231,11 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    // 2016.01.27 by 최가희 추가
+    private void goMainMenuTabPage() {
+        startActivity(new Intent(this, MainMenuTabActivity.class));
+        finish();
     }
 }
