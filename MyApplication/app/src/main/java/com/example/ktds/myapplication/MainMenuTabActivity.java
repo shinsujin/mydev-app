@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -39,6 +40,7 @@ public class MainMenuTabActivity extends ActionBarActivity implements ActionBar.
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tab);
+
 
         // Set up the action bar : 화면 상단의 탭 선택 영역을 위한 액션바를 생성
         final ActionBar actionBar = getSupportActionBar();
@@ -84,7 +86,8 @@ public class MainMenuTabActivity extends ActionBarActivity implements ActionBar.
         }
         return super.onOptionsItemSelected(item);
     }
-*/
+    */
+
     //상단 Tab을 선택 시 해당 Page 출력 위해 onTabSelected Override
     @Override
     public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {
@@ -185,24 +188,8 @@ public class MainMenuTabActivity extends ActionBarActivity implements ActionBar.
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
             View rootView = inflater.inflate(R.layout.tab_menu_info, container, false);
-            TextView tv = (TextView) rootView.findViewById(R.id.section_label1);
-            tv.setText("섹션1");
-            return rootView;
-        }
-    }
-
-
-    public static class SectionsFragment2 extends Fragment {
-
-        public SectionsFragment2() {
-
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
-            View rootView = inflater.inflate(R.layout.tab_shop_info, container, false);
 
             final ArrayList<String> arrayList = new ArrayList<String>();
             arrayList.add("사과");
@@ -224,6 +211,22 @@ public class MainMenuTabActivity extends ActionBarActivity implements ActionBar.
         }
     }
 
+
+    public static class SectionsFragment2 extends Fragment {
+
+        public SectionsFragment2() {
+
+        }
+
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+            View rootView = inflater.inflate(R.layout.tab_shop_info, container, false);
+            TextView tv = (TextView) rootView.findViewById(R.id.section_label1);
+            tv.setText("섹션2");
+            return rootView;
+        }
+    }
+
     public static class SectionsFragment3 extends Fragment {
 
         public SectionsFragment3() {
@@ -233,7 +236,7 @@ public class MainMenuTabActivity extends ActionBarActivity implements ActionBar.
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.tab_review, container, false);
-            TextView tv = (TextView) rootView.findViewById(R.id.section_label3);
+            TextView tv = (TextView) rootView.findViewById(R.id.section_label2);
             tv.setText("섹션3");
             return rootView;
         }
